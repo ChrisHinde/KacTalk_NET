@@ -139,6 +139,21 @@ namespace ktMainLib
             }
         }
 
+        public void GetObject(string p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RunMethod(string p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddExtraParameter(ktString name, ktString value)
+        {
+            m_ExtraParams.Add(name, value);
+        }
+
         public static ktString FormatToString(ktTalkFormat format)
         {
             switch (format)
@@ -194,6 +209,7 @@ namespace ktMainLib
 
 
         public Dictionary<ktString, ktString> Properties { get { return m_InfoMap; } }
+        public Dictionary<ktString, ktString> ExtraParameters { get { return m_ExtraParams; } }
         public ktList AvailableObjects { get { return m_AvailableObjects; } }
         public ktString APIKey { get { return m_APIKey; } }
         public ktString CurrentURI { get { return m_URI; } }
@@ -201,6 +217,7 @@ namespace ktMainLib
 
         protected ktTalkerChannel m_Channel;
         protected Dictionary<ktString, ktString> m_InfoMap;
+        protected Dictionary<ktString, ktString> m_ExtraParams;
 
         protected ktList m_AvailableObjects;
 

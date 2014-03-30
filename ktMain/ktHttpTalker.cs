@@ -63,6 +63,7 @@ namespace ktTalkers
 
         private ktString SendHTTPRequest(ktString URL)
         {
+            ktDebug.Log("ktHTTPTalker:SendHTTPRequest: URL: " + URL);
             try
             {
                 ktString responseBody = Task.Run(() => m_HttpClient.GetStringAsync(URL)).Result;

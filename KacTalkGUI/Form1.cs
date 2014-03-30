@@ -39,8 +39,13 @@ namespace KacTalkGUI
             ktModule mainLib = new ktMainLib.ktMain();
             new ktIDEContext(mainLib.GetContext("Main"));
 
-            m_Talker = new ktMainLib.ktTalker("URI=hindefjord.se/ktTest/index.php;PROTO=HTTP;");
+            m_Talker = new ktMainLib.ktTalker("URI=localhost/kacTalk_PHP;PROTO=HTTP;KEY=658B8C89-BA37-42D6-8D02-7119A5FA613A");
             m_Talker.Initiate();
+
+            m_Talker.AddExtraParameter("ID", "u1234455");
+
+            m_Talker.GetObject("kto");
+            m_Talker.RunMethod("kto");
 
             m_KT = new kacTalk(false);
             m_KT.AllowMissingEOL = true;

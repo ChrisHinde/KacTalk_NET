@@ -27,8 +27,9 @@ namespace KacTalk
         EMPTY,
         CONST,
         UNKNOWN,
+        NOT_AVAILABLE,
 
-        REGEX_COULDNT_SET_PATTERN,
+        REGEX_COULDNT_SET_PATTERN = 3030,
 
         NOERROR = 0
     }

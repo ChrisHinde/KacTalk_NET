@@ -23,6 +23,7 @@ namespace KacTalk
         StartPar,
         EndPar,
         If,
+        Unless,
         Else,
         ElseIf,
         For,
@@ -132,9 +133,7 @@ namespace KacTalk
         {
             ktTokenType Token;
             //ktDebug.Log( "S2TT( " + Str + " )" );
-            if (Str == "if")
-                Token = ktTokenType.If;
-            else if (Str == "program")
+            if (Str == "program")
                 Token = ktTokenType.Program;
             else if (Str == "context")
                 Token = ktTokenType.Context;
@@ -162,6 +161,10 @@ namespace KacTalk
                 Token = ktTokenType.StartPar;
             else if (Str == ")")
                 Token = ktTokenType.EndPar;
+            else if (Str == "if")
+                Token = ktTokenType.If;
+            else if (Str == "unless")
+                Token = ktTokenType.Unless;
             else if (Str == "else")
                 Token = ktTokenType.Else;
             else if (Str == "elseif")
